@@ -1,0 +1,29 @@
+/* Demo styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+/**
+ * ANIMATIONS CSS ---------------------------------
+ */
+.effect-one {
+  position: relative;
+}
+.effect-one:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  margin: 5px -10px;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out 0s;
+}
+.effect-one:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
