@@ -27,3 +27,7 @@ a {
   visibility: visible;
   transform: scaleX(1);
 }
+/* .carouselImg{
+  height: 400px;
+  object-fit: contain;
+} */

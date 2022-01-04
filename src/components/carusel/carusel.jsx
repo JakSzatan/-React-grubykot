@@ -4,28 +4,47 @@ import React from "react"
 export default class Carousel extends React.Component{
   
 //tu consty i logika
+
+//Fetch na backend
+// componentDidMount() {
+//     // Simple POST request with a JSON body using fetch
+//     const requestOptions = {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({
+//           "date": "2021-12-26T00:21:00Z",
+//           "type": "Konsultacja",
+//           "is_canceld": false,
+//           "tattoo_artist": "http://127.0.0.1:8000/users/1/",
+//           "client": "http://127.0.0.1:8000/users/2/"
+//            })
+//     };
+//     fetch('http://127.0.0.1:8000/apointment/', requestOptions)
+//         .then(response => response.json())
+//         .then(data => console.log(data));
+// }
       render(){
      //tu consty i logika
       return(
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner"style={{height:"400px",overflow:"hidden"}} >
-    <div class="carousel-item active" data-bs-interval="2000">
-      <img src="https://www.pitbulltattoothailand.com/app/uploads/2019/12/pitbull-tattoo-slider-004-1600.jpg" class="d-block w-100" alt="..."/>
+<div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-inner"style={{height:"500px",overflow:"hidden"}} >
+    <div className="carousel-item active" data-bs-interval="2000">
+      <img src="https://www.pitbulltattoothailand.com/app/uploads/2019/12/pitbull-tattoo-slider-004-1600.jpg" className="d-block w-100 carouselImg" alt="..."/>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://thumbs.img-sprzedajemy.pl/1000x901c/81/e0/78/tatuaz-tattoo-studio-too-tattoo-pomorskie-gdansk-536453875.jpg" class="d-block w-100" alt="..."/>
+    <div className="carousel-item" data-bs-interval="2000">
+      <img src="https://images.unsplash.com/photo-1541121514895-0f36e7d38d14?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" className="d-block w-100 carouselImg" alt="..."/>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://lh3.googleusercontent.com/proxy/_5gwucWtL_wn_4sH-fBgk4aqYaR-q2MEp8Ry2k1knPyj3qNn2H7wCCeE8bl5rRkWyJrCrPPpcvT93x3g-RZW4rDVtyptP-AFev5j0qpqeILM_vhUeIUYrnEMD6BnwIY" class="d-block w-100" alt="..."/>
+    <div className="carousel-item" data-bs-interval="2000">
+      <img src="https://images.unsplash.com/photo-1605647533135-51b5906087d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" className="d-block w-100 carouselImg" alt="..."/>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
   </button>
 </div>
         );
