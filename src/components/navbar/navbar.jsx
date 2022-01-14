@@ -34,10 +34,10 @@ export default class Navbar extends React.Component{
                 <span className="visually-hidden">(current)</span>
             </li>
             <li className="nav-item ">
-            <Link to="/#Ceny" className="nav-link effect-one">Ceny</Link>
+            <a href="/#Ceny" className="nav-link effect-one">Ceny</a>
             </li>
             <li className="nav-item ">
-            <Link to="/#About" className="nav-link effect-one">O Nas</Link>
+            <a href="/#About" className="nav-link effect-one">O Nas</a>
             </li>
             <li className="nav-item dropdown ">
             <Link className="nav-link dropdown-toggle effect-one" data-bs-toggle="dropdown" to="/" role="button" aria-haspopup="true" aria-expanded="false">Nasza Ekipa</Link>
@@ -49,9 +49,15 @@ export default class Navbar extends React.Component{
         <Link className="dropdown-item" to="/">Przemek</Link>
         </div>
         </li>
+        <li className="nav-item ">
+            <Link to="/pic" className="nav-link effect-one">Przymierz</Link>
+            </li>
+        {localStorage.getItem("token")?
+            <li className="nav-item ">
+            <a href="/test" className="nav-link effect-one">Omów się</a>
+            </li>:null}
         </ul>
-        
-        
+
         {localStorage.getItem("token")?
         <div className="navbar-nav">
         <Link to="/" onClick={()=>this.logout()} className="nav-link effect-one">Wyloguj</Link>

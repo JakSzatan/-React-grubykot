@@ -31,3 +31,12 @@ a {
   height: 400px;
   object-fit: contain;
 } */
+.TerminBut{
+  cursor: pointer;
+  background-color: brown;
+  border: 1px black solid;
+  border-radius: 3px;
+}
+.TerminBut:focus{
+  background-color: rgba(231, 106, 106, 0.692);
+}

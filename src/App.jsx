@@ -8,6 +8,10 @@ import "./customstyle.css"
 import MainPage from "./components/main/mainPage";
 import Login from "./components/main/login";
 import Register from "./components/main/register";
+import ApointmentDaySelect from "./components/main/apointmentDaySelect";
+import Pic from "./components/main/pic";
+
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -33,6 +37,15 @@ const App = () =>{
           <Route path="/register">
           <Navbar stick={true}/>
           <Register/>
+          </Route>
+
+          <Route path="/test">
+          <Navbar stick={true}/>
+            <ApointmentDaySelect/>
+          </Route>
+          <Route path="/pic">
+          <Navbar stick={true}/>
+            <Pic/>
           </Route>
 
           <Route path="/">

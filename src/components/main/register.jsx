@@ -26,10 +26,8 @@ const Register = () => {
             body: JSON.stringify({
                 "username": email,
                 "password": password,
-                //"email": confirmPassword,
-                // "firstName": firstName,
-                // "lastName": lastName,
-                // "phoneNumber": phoneNumber,
+                "first_name": firstName,
+                "last_name": lastName,
             }
             )        
         };
@@ -57,25 +55,21 @@ const Register = () => {
             <input onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" id="exampleInputPassword1" placeholder="Email"/>
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInputPassword1" className="form-label mt-4">Password</label>
-            <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+            <label htmlFor="exampleInputPassword2" className="form-label mt-4">Password</label>
+            <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword2" placeholder="Password"/>
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInputPassword1" className="form-label mt-4">Confirm Password</label>
-            <input onChange={(e) => setconfirmPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword1" placeholder="Confirm Password"/>
+            <label htmlFor="exampleInputPassword3" className="form-label mt-4">Confirm Password</label>
+            <input onChange={(e) => setconfirmPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword3" placeholder="Confirm Password"/>
             </div>
-            {/* <label htmlFor="firstname"><b>First Name</b></label>
-            <input onChange={(e) => setfirstName(e.target.value)} className="RegisterInput" type="text" placeholder="Enter First Name" name="firstname" required/>
-            
-            <label htmlFor="lastname"><b>Last Name</b></label>
-            <input onChange={(e) => setlastName(e.target.value)} className="RegisterInput" type="text" placeholder="Enter Last Name" name="lastname" required/>
-            
-            <label htmlFor="PhoneNumber"><b>Phone Number</b></label>
-            <input onChange={(e) => setphoneNumber(e.target.value)}  className="RegisterInput" type="text" placeholder="Enter Phone Number" name="PhoneNumber" required/>
-
-            <label>
-                <input type="checkbox" checked="checked" name="remember" style={{"marginBottom":"15px"}}/> Remember me
-            </label> */}
+            <div className="form-group">
+            <label htmlFor="exampleInputPassword4" className="form-label mt-4">First Name</label>
+            <input onChange={(e) => setfirstName(e.target.value)} type="text" className="form-control" id="exampleInputPassword4" placeholder="First Name"/>
+            </div>
+            <div className="form-group">
+            <label htmlFor="exampleInputPassword5" className="form-label mt-4">Last Name</label>
+            <input onChange={(e) => setlastName(e.target.value)}  type="text" className="form-control" id="exampleInputPassword5" placeholder="Last Name"/>
+            </div>
 
             <p>By creating an account you agree to our <a href="#" style={{"color":"dodgerblue"}}>Terms and Privacy</a>.</p>
 

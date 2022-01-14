@@ -22,7 +22,6 @@ import { useState } from "react";
         };
         const resp= await fetch('http://127.0.0.1:8000/login/', requestOptions)
 
-        
             if (!resp.ok) {
             window.alert("Coś Poszło nie tak");
             }
@@ -35,17 +34,6 @@ import { useState } from "react";
             
     }
 
-    const Test=()=>{
-        const requestOptions = {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json',
-            Authorization: "JWT "+localStorage.getItem('token'),
-            },
-        };
-        fetch('http://127.0.0.1:8000/users/?format=json', requestOptions)
-            .then(response => response.json())
-            .then(data => console.log(data));
-    }
    return(
         <div className="container px-5 mt-2">
             <form onSubmit={HandleSubmit}> 
@@ -66,7 +54,6 @@ import { useState } from "react";
                 <button type="submit" className="btn btn-primary mt-2">Sign In</button>
             </div>
             </form>
-            <button onClick={()=>Test()}>test</button>
         </div>
   
    );
