@@ -54,12 +54,13 @@ export default class Navbar extends React.Component{
             </li>
         {localStorage.getItem("token")?
             <li className="nav-item ">
-            <a href="/test" className="nav-link effect-one">Omów się</a>
+            <a href="/apo" className="nav-link effect-one">Omów się</a>
             </li>:null}
         </ul>
 
         {localStorage.getItem("token")?
         <div className="navbar-nav">
+        <Link to="/prof" className="nav-link effect-one">Profil</Link>
         <Link to="/" onClick={()=>this.logout()} className="nav-link effect-one">Wyloguj</Link>
         </div>
         :

@@ -52,7 +52,6 @@ export default class apointment extends React.Component{
         }
     }
       render(){
-        console.log(this.state.apointments)
         let terminy=[];
         for (let index = 0; index < 17; index++) {
             var today = new Date(this.props.date);
@@ -78,13 +77,15 @@ export default class apointment extends React.Component{
             }
         }
 
-      return(<div>
-            {terminy.map((item,index)=>
-                <div onClick={()=>{this.setState({selectedDate:item.date})}} tabIndex={index} className="TerminBut" style={item.hide?{visibility: "hidden"}:{}} key={index}>
-                    {item.date.getHours()}.{item.date.getMinutes()/10}0
-                </div>
-            )}
-            <button onClick={()=>this.makeApointment()}>aa</button>
+      return(<div >
+            <div className="d-flex flex-row flex-wrap">
+                {terminy.map((item,index)=>
+                    <div onClick={()=>{this.setState({selectedDate:item.date})}} tabIndex={index} className="TerminBut col-3 p-1 text-center" style={item.hide?{visibility: "hidden"}:{}} key={index}>
+                        {item.date.getHours()}.{item.date.getMinutes()/10}0
+                    </div>
+                )}
+            </div>
+            <button className="mt-2 btn btn-success" onClick={()=>this.makeApointment()}>Umów Się</button>
       </div>);
       }
   }

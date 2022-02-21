@@ -43,18 +43,23 @@ export default class apointmentDaySelect extends React.Component{
 
       render(){
 
-      return(<div>
-            <select name="artist" onChange={this.handleChange3} >
-          <option value={0}>--wybierz--</option>
-          <option  value={2}>Konsultacja</option>
-          <option value={6}>Sesja</option>
-          <option  value={3}>Poprawki</option>
-            </select>
-          <select name="artist" onChange={this.handleChange2} >
-          <option key={9999} value={0}>--wybierz--</option>)
-          {this.state.TattooArtist.map(option => <option key={option.id} value={option.id}>{option.first_name}</option>)}
-            </select>
-        <input type="date" onChange={this.handleChange} defaultValue={new Date().toISOString().slice(0, 10)} min={new Date().toISOString().slice(0, 10)}/>
+      return(<div className="mt-5 container">
+        
+          <div className="form-label">Typ Sesji</div>
+              <select name="artist" className="col-4 form-select " onChange={this.handleChange3} >
+            <option value={0}>--wybierz--</option>
+            <option  value={2}>Konsultacja</option>
+            <option value={6}>Sesja</option>
+            <option  value={3}>Poprawki</option>
+              </select>
+          
+              <div className="form-label mt-2">Artysta</div>
+            <select name="artist" className="col-4 form-select" onChange={this.handleChange2} >
+            <option key={9999} value={0}>--wybierz--</option>)
+            {this.state.TattooArtist.map(option => <option key={option.id} value={option.id}>{option.first_name}</option>)}
+              </select>
+              <div className="form-label mt-2">Termin</div>
+          <input className="col-12 text-center" type="date" onChange={this.handleChange} defaultValue={new Date().toISOString().slice(0, 10)} min={new Date().toISOString().slice(0, 10)}/>
           <Apointment Type={this.state.selectedType} value={this.state.selectedTypeValue} date={this.state.date} ArtistId={this.state.ArtistId}/>
       </div>);
       }

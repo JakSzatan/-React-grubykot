@@ -37,21 +37,20 @@ import { useState } from "react";
    return(
         <div className="container px-5 mt-2">
             <form onSubmit={HandleSubmit}> 
-            <h1>Sign In</h1>
+            <h1>Zaloguj się</h1>
 
             <div className="form-group">
-            <label htmlFor="exampleInputEmail1" className="form-label mt-4">Email address</label>
-            <input onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label htmlFor="exampleInputEmail1" className="form-label mt-4">Email</label>
+            <input onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email"/>
             </div>
 
             <div className="form-group">
-            <label htmlFor="exampleInputPassword1" className="form-label mt-4">Password</label>
-            <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+            <label htmlFor="exampleInputPassword1" className="form-label mt-4">Hasło</label>
+            <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword1" placeholder="Hasło"/>
             </div>
 
             <div className="clearfix">
-                <button type="submit" className="btn btn-primary mt-2">Sign In</button>
+                <button type="submit" className="btn btn-primary mt-2">zaloguj</button>
             </div>
             </form>
         </div>

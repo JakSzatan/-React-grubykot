@@ -10,7 +10,7 @@ import Login from "./components/main/login";
 import Register from "./components/main/register";
 import ApointmentDaySelect from "./components/main/apointmentDaySelect";
 import Pic from "./components/main/pic";
-
+import Profile from "./components/main/profile";
 
 import {
     BrowserRouter as Router,
@@ -39,13 +39,19 @@ const App = () =>{
           <Register/>
           </Route>
 
-          <Route path="/test">
+          <Route path="/apo">
           <Navbar stick={true}/>
             <ApointmentDaySelect/>
           </Route>
+
           <Route path="/pic">
           <Navbar stick={true}/>
             <Pic/>
+          </Route>
+
+          <Route path="/prof">
+          <Navbar stick={true}/>
+            <Profile/>
           </Route>
 
           <Route path="/">
