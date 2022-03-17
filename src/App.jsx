@@ -63,12 +63,6 @@ const App = () =>{
 
         </div>
     </Router>
-
-
-        
-      
-        
-
     );
 }
 

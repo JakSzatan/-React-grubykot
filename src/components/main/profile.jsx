@@ -25,21 +25,15 @@ export default class Profile extends React.Component{
             if (resp2.ok) {
                 this.setState({Name:data2})
             }
-
     }
       render(){
       return(
       <div className="container mt-5">
         <div>
-        
         <h3>Imie: {this.state.Name[0].first_name}
         <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" className="ms-4 btn btn-secondary"><i  className="bi bi-pen text-Light ms-1 fs-5"></i></button></h3>
-        
         <h3>Nazwisko: {this.state.Name[0].last_name}
         <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" className="ms-4 btn btn-secondary"><i  className="bi bi-pen text-Light ms-1 fs-5"></i></button></h3>
-
-
-
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -64,7 +58,6 @@ export default class Profile extends React.Component{
     </div>
   </div>
 </div>
-
         <h3>Zarezerwowane wizyty:</h3>
         </div> 
           <div className="d-flex flex-row flex-wrap">

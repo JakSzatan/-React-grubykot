@@ -3,28 +3,7 @@ import React from "react"
 
 export default class Carousel extends React.Component{
   
-//tu consty i logika
-
-//Fetch na backend
-// componentDidMount() {
-//     // Simple POST request with a JSON body using fetch
-//     const requestOptions = {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//           "date": "2021-12-26T00:21:00Z",
-//           "type": "Konsultacja",
-//           "is_canceld": false,
-//           "tattoo_artist": "http://127.0.0.1:8000/users/1/",
-//           "client": "http://127.0.0.1:8000/users/2/"
-//            })
-//     };
-//     fetch('http://127.0.0.1:8000/apointment/', requestOptions)
-//         .then(response => response.json())
-//         .then(data => console.log(data));
-// }
       render(){
-     //tu consty i logika
       return(
 <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner"style={{height:"500px",overflow:"hidden"}} >

@@ -1,13 +1,10 @@
 import React from "react"
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 
 export default class Navbar extends React.Component{
-   
 
     async logout(){
       await localStorage.removeItem("token")
@@ -26,7 +23,6 @@ export default class Navbar extends React.Component{
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
         </button>
-
         <div className="collapse navbar-collapse" id="navbarColor02">
         <ul className="navbar-nav me-auto">
             <li className="nav-item">
@@ -57,7 +53,6 @@ export default class Navbar extends React.Component{
             <a href="/apo" className="nav-link effect-one">Omów się</a>
             </li>:null}
         </ul>
-
         {localStorage.getItem("token")?
         <div className="navbar-nav">
         <Link to="/prof" className="nav-link effect-one">Profil</Link>
@@ -69,8 +64,6 @@ export default class Navbar extends React.Component{
         <Link to="/register" className="nav-link effect-one">Zarejestruj</Link>
         </div>
         }
-
-
         </div>
     </div>
     </nav>
